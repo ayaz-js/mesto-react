@@ -2,7 +2,7 @@ import { useState, useCallback } from "react";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
-import ImagePopup from "./popups/ImagePopup";
+import ImagePopup from "./ImagePopup";
 
 function App() {
   const [isSelectedCard, setSelectedCard] = useState(null);
