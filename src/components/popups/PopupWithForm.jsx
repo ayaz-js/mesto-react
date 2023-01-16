@@ -1,6 +1,6 @@
 import Popup from './Popup';
 
-function PopupWithForm({title, name, children, isOpen, onClose}) {
+function PopupWithForm({title, name, children, isOpen, onClose, buttonText = "Сохранить",}) {
   return (
     <Popup name={name} isOpen={isOpen} onClose={onClose}>
       <h2 className="popup__title">{title}</h2>
@@ -9,7 +9,7 @@ function PopupWithForm({title, name, children, isOpen, onClose}) {
 
         {children}
 
-        <button type="submit" disabled className="form__save-button">Сохранить</button>
+        <button type="submit" disabled className="form__save-button">{buttonText}</button>
       </form>
     </Popup>
   );

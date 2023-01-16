@@ -23,7 +23,7 @@ function Main(props) {
       <main className="content">
 
         <section className="profile">
-          <div className="profile__avatar">
+          <div className="profile__avatar" onClick={props.onEditAvatar}>
             <img
               src={userAvatar}
               alt="Аватар пользователя"
@@ -33,10 +33,10 @@ function Main(props) {
 
           <div className="profile__info">
             <h1 className="profile__name">{userName}</h1>
-            <button type="button" className="profile__edit-button"></button>
+            <button type="button" className="profile__edit-button" onClick={props.onEditProfile}></button>
             <p className="profile__role">{userDescription}</p>
           </div>
-          <button type="button" className="profile__add-button"></button>
+          <button type="button" className="profile__add-button" onClick={props.onAddPlace}></button>
         </section>
 
         <section className="elements">
