@@ -3,6 +3,7 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import ImagePopup from "./popups/ImagePopup";
+import PopupWithForm from "./popups/PopupWithForm";
 
 function App() {
   const [isSelectedCard, setSelectedCard] = useState(null);
@@ -22,6 +23,7 @@ function App() {
       <Footer/>
 
       <ImagePopup isOpen={isSelectedCard} onClose={closeAllPopups} card={isCardData} />
+      <PopupWithForm />
 
     </div>
   );
