@@ -1,5 +1,4 @@
-.root {
-  background:  #000;
+.page {
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -9,4 +8,5 @@
   text-rendering: optimizeLegibility;
   margin-left: calc(100vw - 100%);
   margin-right: 0;
+  background-color: #000;
 }
