@@ -14,6 +14,7 @@
 ### Технологии
 * HTML5; :heavy_check_mark:
 * CSS3; :heavy_check_mark:
+* React; :heavy_check_mark:
 * JavaScript (стандарт ES6); :heavy_check_mark:
 * Методология БЭМ; :heavy_check_mark:
 * Файловая структура проекта по правилам Nested; :heavy_check_mark:
