@@ -1,7 +1,7 @@
 class Api {
   constructor(data) {
     this._baseUrl = data.serverUrl;
-    this._token = data.token;
+    this._headers = data.headers;
   }
 
   //* Проверка статуса запроса
@@ -18,9 +18,7 @@ class Api {
   //* Запрос для получение данных профеля
   getUserInfo() {
     return fetch(`${this._baseUrl}users/me`, {
-      headers: {
-        authorization: this._token,
-      },
+      headers: this._headers,
     })
       .then((response) => this._requestResult(response))
   }
@@ -29,10 +27,7 @@ class Api {
   editProfile(data) {
     return fetch(`${this._baseUrl}users/me`, {
       method: "PATCH",
-      headers: {
-        authorization: this._token,
-        "Content-Type": "application/json",
-      },
+      headers: this._headers,
       body: JSON.stringify({
         name: data.name,
         about: data.about,
@@ -43,9 +38,7 @@ class Api {
   //* Запрос для карточек
   getInitialCards() {
     return fetch(`${this._baseUrl}cards`, {
-      headers: {
-        authorization: this._token,
-      },
+      headers: this._headers,
     })
       .then((response) => this._requestResult(response))
   }
@@ -54,10 +47,7 @@ class Api {
   addNewCard(data) {
     return fetch(`${this._baseUrl}cards`, {
       method: "POST",
-      headers: {
-        authorization: this._token,
-        "Content-Type": "application/json",
-      },
+      headers: this._headers,
       body: JSON.stringify({
         name: data.name,
         link: data.link,
@@ -69,9 +59,7 @@ class Api {
   addCardLike(data) {
     return fetch(`${this._baseUrl}cards/likes/${data}`, {
       method: "PUT",
-      headers: {
-        authorization: this._token,
-      },
+      headers: this._headers,
     }).then((response) => this._requestResult(response));
   }
 
@@ -79,9 +67,7 @@ class Api {
   deleteCardLike(data) {
     return fetch(`${this._baseUrl}cards/likes/${data}`, {
       method: "DELETE",
-      headers: {
-        authorization: this._token,
-      },
+      headers: this._headers,
     }).then((response) => this._requestResult(response));
   }
 
@@ -89,9 +75,7 @@ class Api {
   deleteCard(cardId) {
     return fetch(`${this._baseUrl}cards/${cardId}`, {
       method: "DELETE",
-      headers: {
-        authorization: this._token,
-      },
+      headers: this._headers,
     }).then((response) => this._requestResult(response));
   }
 
@@ -99,10 +83,7 @@ class Api {
   editAvatar(data) {
     return fetch(`${this._baseUrl}users/me/avatar`, {
       method: "PATCH",
-      headers: {
-        authorization: this._token,
-        "Content-Type": "application/json",
-      },
+      headers: this._headers,
       body: JSON.stringify({
         avatar: data.avatar,
       }),
@@ -112,5 +93,8 @@ class Api {
 
 export default new Api({
   serverUrl: 'https://mesto.nomoreparties.co/v1/cohort-52/',
-  token: '4313ac51-7853-47ce-b5c6-6d8de79244e3',
+  headers: {
+    authorization: "4313ac51-7853-47ce-b5c6-6d8de79244e3",
+    "Content-Type": "application/json",
+  },
 });

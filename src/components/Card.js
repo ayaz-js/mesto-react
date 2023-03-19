@@ -16,7 +16,6 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
   const cardLikeButtonClassName = `element__like-button ${isLiked ? " element__like-button_active" : ""}`;
 
   return (
-    <>
       <article className="element">
         <img
           alt={card.name}
@@ -43,7 +42,6 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
           ></button>
         )}
       </article>
-    </>
   );
 }
 
