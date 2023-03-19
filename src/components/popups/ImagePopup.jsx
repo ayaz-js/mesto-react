@@ -1,18 +1,19 @@
+import React from "react";
 import Popup from "./Popup";
 
-function ImagePopup({ isOpen, onClose, card }) {
+function ImagePopup({ card, onClose }) {
 
   return (
     <Popup className="popup_theme_dark"
            name="image"
-           isOpen={isOpen}
+           isOpen={!!card}
            onClose={onClose}>
         <img
-          src={card.link}
-          alt={card.name}
+          src={card?.link}
+          alt={card?.name}
           className="popup__image"
         />
-        <p className="popup__image-caption">{card.name}</p>
+        <p className="popup__image-caption">{card?.name}</p>
     </Popup>
   );
 }

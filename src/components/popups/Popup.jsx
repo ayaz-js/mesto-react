@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-function Popup({children, name, isOpen, onClose }) {
+import React, { useEffect, useRef } from "react";
+function Popup({ children, name, isOpen, onClose }) {
   const closeButtonRef = useRef();
 
   useEffect(() => {
@@ -14,7 +14,7 @@ function Popup({children, name, isOpen, onClose }) {
     };
   }, [isOpen, onClose]);
 
-  function handleClose(event) {
+  const handleClose = (event) => {
     if (event.target === event.currentTarget || event.target === closeButtonRef.current) {
       onClose();
     }
