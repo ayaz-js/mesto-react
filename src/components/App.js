@@ -2,11 +2,11 @@ import { useState, useCallback, useEffect } from "react";
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
-import ImagePopup from "./popups/ImagePopup";
-import EditProfilePopup from "./popups/EditProfilePopup";
-import AddPlacePopup from "./popups/AddPlacePopup";
-import EditAvatarPopup from "./popups/EditAvatarPopup";
-import ConfirmationPopup from "./popups/ConfirmationPopup";
+import ImagePopup from "./ImagePopup";
+import EditProfilePopup from "./EditProfilePopup";
+import AddPlacePopup from "./AddPlacePopup";
+import EditAvatarPopup from "./EditAvatarPopup";
+import ConfirmationPopup from "./ConfirmationPopup";
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 import Api from "../utils/api.js";
 
