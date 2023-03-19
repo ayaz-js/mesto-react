@@ -8,7 +8,7 @@ import AddPlacePopup from "./popups/AddPlacePopup";
 import EditAvatarPopup from "./popups/EditAvatarPopup";
 import ConfirmationPopup from "./popups/ConfirmationPopup";
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
-import Api from "../utils/Api.js";
+import Api from "../utils/api.js";
 
 function App() {
   const [cards, setCards] = useState([]);
